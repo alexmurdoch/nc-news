@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { fetchArticles } from "../api";
+import { useParams } from "react-router-dom";
+import { Link, Routes, Route } from "react-router-dom";
 
 export const Home = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
-
+  const {id} = useParams()
   useEffect(() => {
     fetchArticles().then(({ articles }) => {
       setArticles(articles);
@@ -22,7 +24,10 @@ export const Home = () => {
         {articles.map((article) => {
           return (
             <div className="listItems" key={article.article_id}>
-              <div className="articleName"> {article.title}</div>
+            
+
+              <Link to={`/articles/${article.article_id}`} className="articleName" > {article.title}</Link>
+             
               <div className="author"> {article.author}</div>
             </div>
           );
