@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getArticleById } from "../api";
+import { getArticleById, getCommentsByArticleId } from "../api";
 
 export const GetArticle = () => {
   const [loading, setLoading] = useState(true);
   const { article_id } = useParams();
 
   const [article, setArticle] = useState([]);
+  const [comments, setComments] = useState([]);
 
   useEffect(() => {
     getArticleById(article_id).then((result) => {
@@ -14,6 +15,12 @@ export const GetArticle = () => {
       setLoading(false);
     });
   }, []);
+  useEffect(() => {
+    getCommentsByArticleId(article_id).then((result) => {
+      setComments(result);
+    });
+  }, []);
+
   if (loading) {
     return <p className="loading">loading</p>;
   }
@@ -29,7 +36,21 @@ export const GetArticle = () => {
       <div className="idVotes">Votes: {article.votes}</div>
       <div className="idBody">{article.body}</div>
       <div className="idCreatedAt">Date: {article.created_at.slice(0, 10)}</div>
-      <div className="comments">Comments here</div>
+      <div className="comments">
+        Comments here
+        {comments.map((comment) => {
+          return (
+            <section>
+              <div className="commentBody" key={comment.comment_id}>
+                {comment.body}
+              </div>
+              <div className="commentAuthor">{comment.author}</div>
+              <div className="commentVotes">{comment.votes}</div>
+              <div className="createdAt">{comment.created_at}</div>
+            </section>
+          );
+        })}
+      </div>
     </section>
   );
 };

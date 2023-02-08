@@ -5,8 +5,8 @@ const api = axios.create({
 });
 
 export const fetchArticles = () => {
-  return api.get("/articles").then((articles) => {
-    return articles.data;
+  return api.get("/articles").then(({data}) => {
+    return data;
   });
 };
 
@@ -15,3 +15,10 @@ export const getArticleById = (articleId) => {
     return data.article;
   });
 };
+
+export const getCommentsByArticleId = (articleId) => {
+    return api.get(`/articles/${articleId}/comments`).then(({data})=> {
+
+        return data[0] 
+    })
+}
