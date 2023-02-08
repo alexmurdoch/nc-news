@@ -46,7 +46,7 @@ export const GetArticle = () => {
               </div>
               <div className="commentAuthor">{comment.author}</div>
               <div className="commentVotes">{comment.votes}</div>
-              <div className="createdAt">{comment.created_at}</div>
+              <div className="createdAt">{comment.created_at.slice(0, 10)}</div>
             </section>
           );
         })}
