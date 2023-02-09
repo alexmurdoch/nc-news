@@ -8,13 +8,13 @@ export const Home = () => {
   const [loading, setLoading] = useState(true);
   const [topic, setTopic] = useState(null);
   const [topicList, setTopicList] = useState(null);
-
+  const [sortBy, setSortBy] = useState(null);
   useEffect(() => {
-    fetchArticles(topic).then(({ articles }) => {
+    fetchArticles(topic, sortBy).then(({ articles }) => {
       setArticles(articles);
       setLoading(false);
     });
-  }, [topic]);
+  }, [topic, sortBy]);
 
   useEffect(() => {
     fetchTopics().then((result) => {
@@ -30,18 +30,21 @@ export const Home = () => {
   return (
     <main>
       <h2 className="ArticlesH2"> Articles</h2>
-      <section className="topicsList">{topicList.map((topic)=> {
-        return (
-         
-          <button onClick={() => setTopic(topic.slug)}>{topic.slug}</button>
-         
-        )
-      })}
-      
-      
-      
+      <section className="topicsList"> 
+      <p>Topics: </p> 
+        {topicList.map((topic) => {
+          return (
+            <button onClick={() => setTopic(topic.slug)}>{topic.slug}</button>
+          );
+        })}
       </section>
-      
+      <section>
+        <p>Sort by:</p>
+        <button onClick={()=> setSortBy("author")}>Author</button>
+        <button onClick={()=> setSortBy("created_at")}>Date</button>
+        <button onClick={()=> setSortBy("votes")}>Votes</button>
+      </section>
+
       <ol className="articles">
         {articles.map((article) => {
           return (
@@ -55,6 +58,7 @@ export const Home = () => {
               </Link>
 
               <div className="author"> {article.author}</div>
+              <div className="votes">{article.votes}</div>
             </div>
           );
         })}
