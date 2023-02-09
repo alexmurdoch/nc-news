@@ -10,7 +10,7 @@ export const Home = () => {
   const [topicList, setTopicList] = useState(null);
   const [sortBy, setSortBy] = useState(null);
   useEffect(() => {
-    fetchArticles(topic, sortBy).then(({ articles }) => {
+    fetchArticles(topic, sortBy).then(({ articles }) => { 
       setArticles(articles);
       setLoading(false);
     });
