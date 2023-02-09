@@ -2,6 +2,7 @@ import {getCommentsByArticleId} from "../api"
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { AddComment } from "./AddComment";
+import { DeleteComment } from "./DeleteComment";
 
 export const GetComments = () => {
     const { article_id } = useParams();
@@ -19,6 +20,7 @@ export const GetComments = () => {
             return (
 
             <section key = {comment.comment_id}>
+              {comment.author === "grumpy19" && <DeleteComment commentId={comment.comment_id}/>}
               <p className="commentBody" >
                 {comment.body}
               </p>
