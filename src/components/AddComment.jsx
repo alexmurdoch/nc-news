@@ -2,15 +2,13 @@ import { postComment } from "../api";
 import { useState } from "react";
 
 export const AddComment = ({ articleId }) => {
- 
   const [newComment, setNewComment] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    postComment(articleId, newComment).then(()=>{
-      window.location.reload()
+    postComment(articleId, newComment).then(() => {
+      window.location.reload();
     });
-    
   };
 
   return (
@@ -20,7 +18,6 @@ export const AddComment = ({ articleId }) => {
         onChange={(e) => setNewComment(e.target.value)}
       />
       <button type="submit">Post Comment</button>
-     
     </form>
   );
 };
