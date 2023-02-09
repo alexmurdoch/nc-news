@@ -18,7 +18,6 @@ export const Home = () => {
 
   useEffect(() => {
     fetchTopics().then((result) => {
-      console.log(result);
       setTopicList(result);
     });
   }, []);
