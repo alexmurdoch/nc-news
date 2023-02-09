@@ -4,9 +4,13 @@ const api = axios.create({
   baseURL: "https://nc-news-project-xk2k.onrender.com/api",
 });
 
-export const fetchArticles = () => {
+export const fetchArticles = ( topic) => {
   
-  return api.get("/articles").then(({ data }) => {
+  return api.get("/articles", {params: {
+    topic: topic,
+    
+  }}).then(({ data }
+) => {
     return data;
   });
 };
@@ -37,3 +41,10 @@ export const postComment = (articleId, comment) => {
   };
   return api.post(`/articles/${articleId}/comments`, newComment);
 };
+
+export const fetchTopics = () => {
+   return api.get(`/topics`).then(({data})=>{
+  
+    return data.topics
+   })
+}

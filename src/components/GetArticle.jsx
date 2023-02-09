@@ -29,13 +29,13 @@ export const GetArticle = () => {
       <h3 className="idTopic" key={article.topic}>
         Topic: {article.topic}
       </h3>
+        <h3><AddVotes currentVotes={article.votes} article_id= {article_id} /></h3>
       <h4 className="idAuthor"> By {article.author}</h4>
       <div className="idVotes">Votes: {article.votes}</div>
       <div className="idBody">{article.body}</div>
       <div className="idCreatedAt">Date: {article.created_at.slice(0, 10)}</div>
       <div className="comments">
         <GetComments />
-        <AddVotes currentVotes={article.votes} article_id= {article_id} />
         
       </div>
     </section>

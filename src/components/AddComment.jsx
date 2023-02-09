@@ -2,12 +2,14 @@ import { postComment } from "../api";
 import { useState } from "react";
 
 export const AddComment = ({ articleId }) => {
-  console.log(articleId, "<<<");
+ 
   const [newComment, setNewComment] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    postComment(articleId, newComment);
+    postComment(articleId, newComment).then(()=>{
+      window.location.reload()
+    });
     
   };
 
