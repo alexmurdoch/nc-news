@@ -1402,8 +1402,8 @@
             "parentId": "page",
             "childIndex": 67,
             "point": [
-              440.74,
-              -1125.45
+              451.21,
+              -1127.54
             ],
             "rotation": 0,
             "text": "App",
@@ -1424,8 +1424,8 @@
             "parentId": "page",
             "childIndex": 68,
             "point": [
-              375.48,
-              -1219.28
+              371.29,
+              -1208.81
             ],
             "rotation": 0,
             "bend": -0.000029416443631257815,
@@ -1480,8 +1480,8 @@
             "parentId": "page",
             "childIndex": 69,
             "point": [
-              343.46,
-              -1278.4
+              356.02,
+              -1274.21
             ],
             "rotation": 0,
             "text": "title",
@@ -1802,8 +1802,8 @@
             "parentId": "page",
             "childIndex": 79,
             "point": [
-              -574.64,
-              -275.23
+              -589.3,
+              -227.07
             ],
             "rotation": 0,
             "text": "post comment",
@@ -2234,8 +2234,8 @@
             "parentId": "page",
             "childIndex": 95,
             "point": [
-              -214.06325880083432,
-              -407.4298904704775
+              -228.71,
+              -382.31
             ],
             "rotation": 0,
             "text": "get comments",
@@ -2256,8 +2256,8 @@
             "parentId": "page",
             "childIndex": 96,
             "point": [
-              -379.47,
-              -348.65
+              -387.84,
+              -317.24
             ],
             "rotation": 0,
             "bend": 0.000024732284497944103,
@@ -2312,9 +2312,8 @@
             "parentId": "page",
             "childIndex": 97,
             "point": [
-              -119.84460885604824,
-              -348.64878670502094,
-              0.5
+              -132.41,
+              -321.43
             ],
             "rotation": 0,
             "bend": 0.00003262353223693169,

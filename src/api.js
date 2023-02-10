@@ -4,16 +4,17 @@ const api = axios.create({
   baseURL: "https://nc-news-project-xk2k.onrender.com/api",
 });
 
-export const fetchArticles = ( topic, sortBy) => {
-  
-  return api.get("/articles", {params: {
-    topic: topic,
-    sort_by: sortBy
-    
-  }}).then(({ data }
-) => {
-    return data;
-  });
+export const fetchArticles = (topic, sortBy) => {
+  return api
+    .get("/articles", {
+      params: {
+        topic: topic,
+        sort_by: sortBy,
+      },
+    })
+    .then(({ data }) => {
+      return data;
+    });
 };
 
 export const getArticleById = (articleId) => {
@@ -38,14 +39,18 @@ export const patchVotes = (articleId, votes) => {
 export const postComment = (articleId, comment) => {
   const newComment = {
     username: "grumpy19",
-    body: comment
+    body: comment,
   };
   return api.post(`/articles/${articleId}/comments`, newComment);
 };
 
 export const fetchTopics = () => {
-   return api.get(`/topics`).then(({data})=>{
+  return api.get(`/topics`).then(({ data }) => {
+    return data.topics;
+  });
+};
+
+export const removeComments = ( commentId ) => {
   
-    return data.topics
-   })
-}
+  return api.delete(`/comments/${commentId}`);
+};
