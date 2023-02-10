@@ -9,12 +9,13 @@ export const Home = () => {
   const [topic, setTopic] = useState(null);
   const [topicList, setTopicList] = useState(null);
   const [sortBy, setSortBy] = useState(null);
+  const [order, setOrder] = useState("desc");
   useEffect(() => {
-    fetchArticles(topic, sortBy).then(({ articles }) => {
+    fetchArticles(topic, sortBy, order).then(({ articles }) => {
       setArticles(articles);
       setLoading(false);
-    });
-  }, [topic, sortBy]);
+    })
+  }, [topic, sortBy, order]);
 
   useEffect(() => {
     fetchTopics().then((result) => {
@@ -28,6 +29,14 @@ export const Home = () => {
         loading
       </p>
     );
+  }
+  function changeOrder() {
+    if (order === "desc"){
+      setOrder("asc")
+    }
+    else {
+      setOrder("desc")
+    }
   }
 
   return (
@@ -48,6 +57,7 @@ export const Home = () => {
         <button onClick={() => setSortBy("author")}>Author</button>
         <button onClick={() => setSortBy("created_at")}>Date</button>
         <button onClick={() => setSortBy("votes")}>Votes</button>
+        <button onClick={() => changeOrder()}>{order + `ending`}</button>
       </section>
 
       <ol className="articles" key={1}>
