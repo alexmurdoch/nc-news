@@ -13,8 +13,8 @@
   
   .arrange button {
     padding: 10px 20px;
-    color: #EFEAD8;
-    background-color: #5F7161;
+    color: #ffffff;
+    background-color: #1c353b;
     border: none;
     border-radius: 5px;
     margin-right: 10px;
@@ -25,4 +25,8 @@
   .arrange button:hover {
     background-color: #EFEAD8;
     color: #2C3333;
+  }
+
+  .ArticlesH2 {
+    padding-left: 30px;
   }

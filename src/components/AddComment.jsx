@@ -30,7 +30,7 @@ export const AddComment = ({ articleId, setComments, comments }) => {
         value={newComment}
         onChange={(e) => setNewComment(e.target.value)}
       />
-      <button type="submit">Post Comment</button>
+      <button id="postCommentButton" type="submit">Post Comment</button>
     </form>
   );
 };

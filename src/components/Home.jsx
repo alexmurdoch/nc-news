@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchArticles, fetchTopics } from "../api";
-import "./css/Home.css"
+import "./css/Home.css";
 import { Link } from "react-router-dom";
 
 export const Home = () => {
@@ -14,7 +14,7 @@ export const Home = () => {
     fetchArticles(topic, sortBy, order).then(({ articles }) => {
       setArticles(articles);
       setLoading(false);
-    })
+    });
   }, [topic, sortBy, order]);
 
   useEffect(() => {
@@ -31,17 +31,15 @@ export const Home = () => {
     );
   }
   function changeOrder() {
-    if (order === "desc"){
-      setOrder("asc")
-    }
-    else {
-      setOrder("desc")
+    if (order === "desc") {
+      setOrder("asc");
+    } else {
+      setOrder("desc");
     }
   }
 
   return (
     <main>
-      <h2 className="ArticlesH2"> Articles</h2>
       <section className="arrange">
         <p>Topics: </p>
         {topicList.map((topic) => {
@@ -60,6 +58,7 @@ export const Home = () => {
         <button onClick={() => changeOrder()}>{order + `ending`}</button>
       </section>
 
+      <h2 className="ArticlesH2"> Featured Articles</h2>
       <ol className="articles" key={1}>
         {articles.map((article) => {
           return (

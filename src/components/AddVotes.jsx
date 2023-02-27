@@ -22,7 +22,7 @@ export const AddVotes = (props) => {
         <>
           <p> Votes: {votesChange + props.currentVotes}</p>
           <p>{voteResponse}</p>
-          <button onClick={incVotes}>VOTE</button>
+          <button id="upvote" onClick={incVotes}>VOTE</button>
         </>
       )}
     </section>

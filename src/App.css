@@ -1,29 +1,65 @@
 html {
-  background-color: #EFEAD8;
+  background-color: #af94da;
 }
 
 .App {
-  text-align: center ;
-  margin: 0;
+  text-align: center;
+  margin: 0px;
   list-style: none;
   text-decoration: none;
   font-family: sans-serif;
   margin-top: 10px;
-
+  padding: 0px;
 }
 .h1 {
-  width: 100%;
+  text-align: center;
+  width: 80%;
   height: 80px;
   display: block;
-  background-color: #5F7161;
-  color:beige;
+  background-color: #2f1236;
+  color: #ffffff;
   font-size: 50px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 30px;
+  padding-top: 20px;
+  margin-left: 13%;
 }
 
+.articles {
+  padding-top: 10px;
+  border-top: 5px solid black;
+}
+.listItems {
+  border: 5px dotted black;
+  border-bottom: none;
+  border-radius: 5px;
+}
 
+#upvoteButton {
+  padding: 10px;
+  border: 3px solid rgb(66, 34, 107);
+  border-radius: 5px;
+}
 
+#postCommentButton {
+  padding: 10px;
+  border: 3px solid rgb(66, 34, 107);
+  border-radius: 5px;
+}
 
+#postCommentButton {
+  background-color: rgb(69, 54, 151);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
 
-
-
-
+#commentsText{
+  margin-top: 15px ;
+  font-weight: bold;
+}

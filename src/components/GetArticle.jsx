@@ -35,6 +35,7 @@ export const GetArticle = () => {
       <div className="idBody">{article.body}</div>
       <div className="idCreatedAt">Date: {article.created_at.slice(0, 10)}</div>
       <div className="comments">
+        <div id="commentsText">Comments</div>
         <GetComments />
         
       </div>
