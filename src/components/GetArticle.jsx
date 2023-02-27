@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { getArticleById } from "../api";
 import { AddVotes } from "./AddVotes";
 import { GetComments } from "./GetComments";
-import { AddComment } from "./AddComment";
 
 export const GetArticle = () => {
   const [loading, setLoading] = useState(true);

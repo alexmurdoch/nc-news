@@ -1,5 +1,5 @@
 html {
-  background-color: #af94da;
+  background-color: #fcfaff;
 }
 
 .App {
@@ -49,7 +49,7 @@ html {
 }
 
 #postCommentButton {
-  background-color: rgb(69, 54, 151);
+  background-color: rgb(103, 94, 155);
   color: white;
   border: none;
   border-radius: 10px;
@@ -63,3 +63,4 @@ html {
   margin-top: 15px ;
   font-weight: bold;
 }
+
