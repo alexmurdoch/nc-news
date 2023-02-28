@@ -72,7 +72,7 @@ export const Home = () => {
               </Link>
 
               <div className="author"> {article.author}</div>
-              <div className="votes">{article.votes}</div>
+              <div className="votes">Upvotes: {article.votes}</div>
             </div>
           );
         })}

@@ -1,5 +1,5 @@
 html {
-  background-color: #6096B4;
+  background-color: #F9F5E7;
 }
 
 .App {
@@ -16,35 +16,38 @@ html {
   width: 80%;
   height: 80px;
   display: block;
-  background-color: #2f1236;
+  background-color: #A7727D;
   color: #ffffff;
   font-size: 50px;
   border-radius: 10px;
   font-weight: bold;
   margin-top: 30px;
   padding-top: 20px;
-  margin-left: 13%;
+  margin-left: 10%;
 }
 
 .articles {
   padding-top: 10px;
   border-top: 5px solid black;
+  font-size: large;
+  font-family: 'arial';
 }
 .listItems {
-  border: 5px dotted black;
+  border-top: 5px dotted black;
   border-bottom: none;
   border-radius: 5px;
+  font-weight: bold;
 }
 
 #upvoteButton {
   padding: 10px;
-  border: 3px solid rgb(66, 34, 107);
+  border: 3px solid #6096B4;
   border-radius: 5px;
 }
 
 #postCommentButton {
   padding: 10px;
-  border: 3px solid rgb(66, 34, 107);
+  border: 3px solid #6096B4;
   border-radius: 5px;
 }
 
@@ -62,5 +65,18 @@ html {
 #commentsText{
   margin-top: 15px ;
   font-weight: bold;
+}
+
+.article_body {
+  text-align: left;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.comments{
+  margin-left: 0%;
+  margin-top: 10px;
+  border-top: 2px solid black;
+  
 }
 
