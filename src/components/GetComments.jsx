@@ -14,7 +14,7 @@ export const GetComments = () => {
     .catch((error) => {
       console.error("Error while posting comment:", error);
     });
-  }, []);
+  }, [article_id]);
   return (
     <ul>
       <AddComment

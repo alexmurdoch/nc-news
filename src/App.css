@@ -1,5 +1,5 @@
 html {
-  background-color: #F9F5E7;
+  background-color: #242321;
 }
 
 .App {
@@ -10,13 +10,14 @@ html {
   font-family: sans-serif;
   margin-top: 10px;
   padding: 0px;
+  color: rgba(255, 255, 255, 0.808)
 }
 .h1 {
   text-align: center;
   width: 80%;
   height: 80px;
   display: block;
-  background-color: #A7727D;
+  background-color: #be1f3fe8;
   color: #ffffff;
   font-size: 50px;
   border-radius: 10px;
@@ -26,11 +27,18 @@ html {
   margin-left: 10%;
 }
 
+
 .articles {
   padding-top: 10px;
   border-top: 5px solid black;
   font-size: large;
   font-family: 'arial';
+  padding-left: 30px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  
 }
 .listItems {
   border-top: 5px dotted black;
@@ -80,3 +88,6 @@ html {
   
 }
 
+.articleName{
+  color: rgb(126, 33, 33);
+}

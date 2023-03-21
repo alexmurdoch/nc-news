@@ -15,7 +15,7 @@ export const GetArticle = () => {
       setArticle(result);
       setLoading(false);
     });
-  }, []);
+  }, [article_id]);
 
   if (loading) {
     return <p className="loading">loading</p>;
